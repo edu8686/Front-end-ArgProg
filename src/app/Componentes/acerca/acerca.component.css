@@ -1,0 +1,14 @@
+section.about {
+    margin-top: 2rem;
+    background-color: white;
+} 
+
+h4.acerca {
+    font-family:"eurostile", sans-serif;
+    text-align: left;
+}
+
+h5.acerca {
+    font-family: "eurostile", sans-serif;
+    text-align: left;
+}

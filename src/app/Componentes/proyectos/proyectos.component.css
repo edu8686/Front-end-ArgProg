@@ -1,0 +1,25 @@
+.card.proyecto:hover {
+    object-fit: cover;
+    transform: translateY(-3%);
+}
+
+.card-img-top {
+    width: 250px;
+    height:127px;
+    object-fit: cover;
+}
+
+.card-body {
+    height: 200px;
+    width: 250px;
+    padding-bottom: 14em;
+}
+
+.card-text  {
+    font-size: x-large;
+}
+
+.proyectos {
+    margin: 100px;
+    background-color:rgb(117, 156, 233);
+}
