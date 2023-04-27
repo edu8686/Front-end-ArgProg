@@ -1,8 +1,4 @@
-body {
-    background: #7F7FD5;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
+
 
 .container.text-center {
     margin-top: 50px;
@@ -54,10 +50,7 @@ h4.titulo-item {
 
 .row {
     background-color:rgb(251, 251, 242);
-    padding: 1rem;
     border: 1px solid #6a7781;
-    border-radius: 13px;
-    margin: 100px
 }
 
 
@@ -108,8 +101,6 @@ div.row.acerca {
 }
 
 .proyectos{
-    border-radius: 13px;
-    margin-bottom: 3em;
     background-color: white;
     border: 1px solid #6a7781;
     height: 700px;
