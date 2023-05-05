@@ -1,14 +1,17 @@
-<div class="nav navbar navbar-dark bg-primary">
-    <div class="container-md">
-        <img src="/assets/IMG/arg-programa logo.png" alt="Bootstrap" height="75">
-        <ul class="list-group list-group-horizontal">
-            <li class="list-group-item"><i class="fa-brands fa-instagram fa-2xl"></i></li>
-            <li class="list-group-item"><i class="fa-brands fa-linkedin fa-2xl"></i></li>
-            <!-- Button trigger modal -->
-            <li class="list-group-item">
-                <a href="/Front end/login.html"></a><i class="fa-solid fa-user fa-2xl" type="button"></i>
-            </li>
-            <li><button type="button" class="btn btn-outline-light">Log-in</button></li>
-        </ul>
+<div class="row">
+    <div class="nav navbar navbar-dark bg-primary">
+        <div class="logo">
+            <img src="/assets/IMG/arg-prog-logo.png" alt="Bootstrap" height="75">
+        </div>
+        <div>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook-f icon"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter icon"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin-in icon"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g icon"></i></a></li>
+            </ul>
+        </div>
+        <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">Iniciar sesión</button>
+        <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">Cerrar sesión</button>
     </div>
 </div>

@@ -1,95 +1,33 @@
-<!--Sección "Educación"-->
-<section class="educacion">
-    <h2 class="subtitulo educ">Educación</h2>
-    <div class="container text-center exp">
-        <div class="container primeraeduc">
-            <div class="row educ">
-                <div class="col-3">
-                    <div><i class="fa-brands fa-linkedin fa-2xl"></i></div>
-                    <div><h4 class="titulo-item">Nombre institución</h4></div>
-                </div>
-                <div class="col-7">
-                    <div class="titulo">
-                        <div class="carrera-periodo">
-                            <h3>Carrera o título</h3>
-                            <h4>Período</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-primary">Editar</button>
-                    <button type="button" class="btn btn-secondary">Eliminar</button>
-                </div>
-            </div>
-        </div>
+<div class="row educacion">
+    <h1>Educacion</h1>
+    <div class="col-lg-1">
+        <button type="button" class="btn btn-info" routerLink="/nuevaeducacion">
+            Agregar Educación
+        </button>
     </div>
-    <div class="container text-center exp2">
-            <div class="row educ">
-                <div class="col-3">
-                    <div><i class="fa-brands fa-linkedin fa-2xl"></i></div>
-                    <div><h4 class="titulo-item">Nombre institución</h4></div>
-                </div>
-                <div class="col-7">
-                        <div class="titulo">
-                            <div class="carrera-periodo">
-                                <h3>Carrera o título</h3>
-                                <h4>Período</h4>
-                            </div>
-                        </div>
-                </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-primary">Editar</button>
-                    <button type="button" class="btn btn-secondary">Eliminar</button>
-                </div>
-            </div>  
+
+    <div class="col lg 1">
     </div>
-    <div class="container text-center exp3">
-            <div class="row educ">
-                <div class="col-3 ">
-                    <div><i class="fa-brands fa-linkedin fa-2xl"></i></div>
-                    <div><h4 class="titulo-item">Nombre institución</h4></div>
-                </div>
-                <div class="col-7">
-                        <div class="titulo">
-                            <div class="carrera-periodo">
-                                <h3>Carrera o título</h3>
-                                <h4>Período</h4>
-                            </div>
-                        </div>
-                </div>
-                <div class="col-2">
-                    <button type="button" class="btn btn-primary">Editar</button>
-                    <button type="button" class="btn btn-secondary">Eliminar</button>
-                </div>
-            </div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <td>
+                        <h2>{{Educacion.nombreEd}}</h2>
+                    </td>
+                    <td>{{Educacion.descripcionEd}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-warning" routerLink="/editeducacion{{Educacion.id}}">
+                            Editar
+                        </button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            Borrar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class="card educ text-center">
-        <div class="card-body educ">
-            <div class="card-title">
-                <h3>Agregar</h3> 
-            </div>
-            <br>
-            <div class="input-group input-group-lg">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Institucion</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-              </div>
-            <br>
-            <div class="input-group input-group-lg">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Carrera</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-              </div>
-            <br>
-            <div class="input-group input-group-lg">
-                <span class="input-group-text" id="inputGroup-sizing-lg">Período</span>
-                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-              </div>
-              <br>
-            <button class="btn btn-primary">
-                Enviar
-            </button>
-            
-        </div>
-    </div>
-    <div>
-    </div>
-</section>
+</div>

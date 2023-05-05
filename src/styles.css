@@ -1,5 +1,3 @@
-
-
 .container.text-center {
     margin-top: 50px;
     width:auto;
@@ -48,12 +46,6 @@ h4.titulo-item {
 }
 
 
-.row {
-    background-color:rgb(251, 251, 242);
-    border: 1px solid #6a7781;
-}
-
-
 div.col-10 {
     padding: 0em;
     margin-top: 0em;
@@ -77,14 +69,6 @@ div.row.acerca {
     border-radius: 13px;
 }
 
-.experiencia {
-    padding: 2em;
-    background-color: rgb(220, 139, 139);
-    border-radius: 13px;
-    margin-bottom: 4em;
-}
-
-
 
 .container.skills {
     margin-bottom: 2em;
@@ -100,62 +84,10 @@ div.row.acerca {
     border: 1px solid #6a7781;
 }
 
-.proyectos{
-    background-color: white;
-    border: 1px solid #6a7781;
-    height: 700px;
-}
-
 .progress {
     margin: 2em;
 }
 
-ul {
-    margin-block-start: 2em;
-    margin-block-end: 2em;
-    margin-inline-start: 15px;
-    margin-inline-end: 15px;
-    padding-inline-start: 40px;
-}
-
-li {
-    margin-left: 50px;
-}
-
-
-.list-group.list-group-item {
-    width:auto;
-    height:auto;
-}
-
-.login-form {
-    margin-top: 10%;
-}
-
-.Idiomas {
-    margin-bottom: 10em;
-}
-
-.list-group-item.d-flex.justify-content-between.align-items-center {
-    box-sizing: content-box;
-    height: 700px;
-    padding-top: 0.75em;
-    height: auto;
-    box-shadow: 2px 2px 7px 1px rgba(28,110,164,0.63);
-}
-
-.list-group.list-group-horizontal {
-    align-content:center;
-    padding-left: 5em;
-}
-
-.list-group.list-group-horizontal.educacion {
-    object-fit:cover
-}
-
-.ingles-titulo {
-    padding-left: 1em;
-}
 
 .btn.btn-primary.btn-proyecto {
     float: none;

@@ -15,7 +15,14 @@ import { HardSoftSkillsComponent } from './Componentes/hard-soft-skills/hard-sof
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './Componentes/footer/footer.component';
 import { NavbarComponent } from './Componentes/navbar/navbar.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
+import { InterceptorService, interceptorProvider } from './service/interceptor-service';
+import { NewExperienciaComponent } from './Componentes/experiencia-laboral/new-experiencia.component';
+import { EditExperienciaComponent } from './Componentes/experiencia-laboral/edit-experiencia.component';
+import { NeweducacionComponent } from './Componentes/educacion/neweducacion.component';
+import { EditeducacionComponent } from './Componentes/educacion/editeducacion.component';
+import { EditskillComponent } from './Componentes/hard-soft-skills/editskill.component';
+import { NewskillComponent } from './Componentes/hard-soft-skills/newskill.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +38,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HardSoftSkillsComponent,
     FooterComponent,
     NavbarComponent,
+    NewExperienciaComponent,
+    EditExperienciaComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
+    EditskillComponent,
+    NewskillComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +56,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
   ],
-  providers: [],
+  providers: [
+    interceptorProvider,
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
