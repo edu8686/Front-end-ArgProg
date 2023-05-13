@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Injectable } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from 'src/app/service/educacion.service';
@@ -8,9 +9,15 @@ import { EducacionService } from 'src/app/service/educacion.service';
   templateUrl: './neweducacion.component.html',
   styleUrls: ['./neweducacion.component.css']
 })
+
+
 export class NeweducacionComponent {
+  fechaInicial: string = '';
+  fechaFinal: string = '';
   nombreEd: string = '';
   descripcionEd: string = '';
+  imageEd: string = '';
+
 
   constructor(private educacionS: EducacionService, private router: Router) {}
 
@@ -19,7 +26,7 @@ export class NeweducacionComponent {
   }
 
   onCreate(): void{
-    const expe = new Educacion(this.nombreEd, this.descripcionEd);
+    const expe = new Educacion(this.nombreEd, this.fechaInicial, this.fechaFinal, this.descripcionEd, this.imageEd);
     this.educacionS.save(expe).subscribe(data=>{
       alert("Educacion añadidad");
       this.router.navigate(['']);
